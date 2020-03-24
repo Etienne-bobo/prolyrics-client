@@ -1,20 +1,30 @@
 <template>
   <div class="container">
-      <div class="song_title">
-          <h2>Add new Song</h2><hr>
-      </div>
-      <v-stepper v-model="e6" vertical>
-    <v-stepper-step :complete="e6 > 1" step="1">
-      Step 1
-    </v-stepper-step>
+    <div class="song_title">
+      <h2>Add new Song</h2>
+      <hr />
+    </div>
+    <v-stepper v-model="e6" vertical>
+      <v-stepper-step :complete="e6 > 1" step="1">
+        Step 1
+      </v-stepper-step>
 
-    <v-stepper-content step="1">
-      <v-card  class="mb-12" height="200px">
-        <div class="form-group">
+      <v-stepper-content step="1">
+        <v-card class="mb-12" height="200px">
+          <div class="form-group">
             <label for="title">Title</label>
-            <input  type="text" v-model="song.title" class="form-control" name="title" id="title" aria-describedby="titleHelp" placeholder="Enter title" required>
-        </div>
-        <div class="form-group">
+            <input
+              type="text"
+              v-model="song.title"
+              class="form-control"
+              name="title"
+              id="title"
+              aria-describedby="titleHelp"
+              placeholder="Enter title"
+              required
+            />
+          </div>
+          <div class="form-group">
             <label for="artist">Artist</label>
             <input  type="text" v-model="song.artist" class="form-control" name="artist" id="artist" aria-describedby="artistHelp" placeholder="Enter artist" required>
         </div>          
@@ -101,15 +111,11 @@ export default {
     methods:{
      
       async create(){
-        try{
         await songService.post(this.song)
         this.$router.push({
           name:'songs'
         })
-        }
-      catch( err){
-        console.log(err)
-      }
+      
       }
      
     }
