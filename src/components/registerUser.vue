@@ -8,7 +8,7 @@
          
                 <div class="row pt-10 pb-5">
                     <div class="col-sm">
-                        <img src="../../public/images/music_logo.jpg" width="300px">
+                        <img src="../../public/images/music_logo.jpg" width="300px" style="border-radius:50%">
                     </div>
                     <div class="col-sm">
                         <form>
