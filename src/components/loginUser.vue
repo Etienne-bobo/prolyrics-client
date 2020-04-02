@@ -79,7 +79,7 @@ export default {
     
     .info_form{
        
-        margin:75px auto;
+        margin:0px auto;
         
         padding: 50px;
         box-shadow: inset -5px -5px 10px darkslategrey,inset 5px 5px 10px white;
