@@ -8,7 +8,7 @@
          
                 <div class="row pt-10 pb-5">
                     <div class="col-sm">
-                        <img src="../../public/images/music_logo.jpg" width="330px">
+                        <img src="../../public/images/music_logo.jpg" width="250px" style="border-radius:50%">
                     </div>
                     <div class="col-sm">
                         <form>
@@ -20,10 +20,7 @@
                                     <label for="password">Password</label>
                                     <input  type="password" v-model="password" name="password" class="form-control" id="password" placeholder="Password" required>
                                 </div>
-                                <div class="form-group form-check">
-                                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                </div>
-                              
+                                
                         </form>
                          <v-btn @click="login" class="mt-5 primary p_btn">Login</v-btn><br><br>
                                <p>New User ? </p> 
