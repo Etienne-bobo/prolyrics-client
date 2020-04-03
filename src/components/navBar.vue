@@ -1,7 +1,7 @@
 <template>
     <div class="navBar">
        
-    <v-app-bar app dense height="70px" color="grey darken-3 white--text" class="d-none d-sm-flex">
+    <v-app-bar app dense height="70px" color="grey darken-3 white--text" class="d-none d-sm-none d-md-flex">
          <router-link to="Home">
            <v-btn icon class="mr-10 ml-10" >
               <v-toolbar-title class="white--text marg">Pro Lyrics</v-toolbar-title>
@@ -23,10 +23,9 @@
 
 
           <router-link to="register">
-                  <v-btn v-if="!$store.state.isUserLoggedIn" icon class="mr-12 ml-12" color="white">
+                  <v-btn v-if="!$store.state.isUserLoggedIn" icon class="mr-2 ml-8" color="white">
 
                   <v-icon color="white">account_circle </v-icon>
-                  Sign Up /Sign In
                 </v-btn>
           </router-link>
        
@@ -59,7 +58,8 @@
       color="grey darken-3 white--text"
       dark
       prominent
-      class="d-flex d-sm-none"
+      height="60"
+      class="d-flex d-sm-flex d-md-none"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
@@ -67,7 +67,7 @@
       
       <v-spacer></v-spacer>
 
-      <v-btn icon>
+      <v-btn icon class="marg2">
         <v-icon>mdi-magnify</v-icon>
       </v-btn>
 
@@ -176,6 +176,10 @@ export default {
  .marg{
    margin-right:30px;
    
+ }
+ .marg2{
+     margin-left:160px;
+ 
  }
 
 </style>

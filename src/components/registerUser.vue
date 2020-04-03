@@ -6,7 +6,7 @@
            <h2>Register</h2>
            <hr>
          
-                <div class="row pt-10 pb-5">
+                <div class="row  pb-5">
                     <div class="col-sm">
                         <img src="../../public/images/music_logo.jpg" width="250px" style="border-radius:50%">
                     </div>
@@ -87,7 +87,7 @@ export default {
        
         margin:0px auto;
         
-        padding: 50px;
+        padding: 0px 50px;
         box-shadow: inset -5px -5px 10px darkslategrey,inset 5px 5px 10px white;
         
         border: none;

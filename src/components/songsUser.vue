@@ -39,9 +39,9 @@
             >
               <v-icon>audiotrack</v-icon>
             </v-btn>
-              <v-list-item-title @click="navigateto" class="ml-10">{{ item.title }}</v-list-item-title>
-              <v-list-item-subtitle class="ml-10">{{ item.artist }}</v-list-item-subtitle>
-              <v-list-item-subtitle class="ml-10">{{ item.album }}</v-list-item-subtitle>
+              <v-list-item-title @click="navigateto(item)" class="ml-10">{{ item.title }}</v-list-item-title>
+              <v-list-item-subtitle @click="navigateto(item)" class="ml-10">{{ item.artist }}</v-list-item-subtitle>
+              <v-list-item-subtitle @click="navigateto(item)" class="ml-10">{{ item.album }}</v-list-item-subtitle>
 
             </v-list-item-content>
 
@@ -84,8 +84,9 @@ export default {
                 name:'create-songs'
             })
         },
-         navigateto : function(){
+         navigateto : function(item){
             this.$router.push({
+                params:{itemId:item.id},
                 name:'song'
             })
         }
