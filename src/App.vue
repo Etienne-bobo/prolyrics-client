@@ -6,9 +6,10 @@
     
 
       <router-view></router-view>
-                   <footers/>
+    <footers/>
 
     </v-content>
+
   </v-app>
 </template>
 

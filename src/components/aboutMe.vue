@@ -5,7 +5,7 @@
   >
     <v-img
       class="white--text align-end image"
-      height="200px"
+      height="400px"
       src="../../public/images/bobo.jpg" 
     >
     </v-img>

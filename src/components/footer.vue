@@ -3,8 +3,9 @@
   <v-card height="150">
     <v-footer
       color="grey"
-      absolute
+     absolute
       class="font-weight-medium"
+      fixed
     >
       <v-col
         class="text-center"
@@ -16,7 +17,7 @@
       </v-btn></a>
       <a href="http://www.instagram.com/etienne-bobo">
       <v-btn class="mx-2 mb-10" fab dark small color="pink">
-      <v-icon dark>mdi-heart</v-icon>
+      <v-icon dark>fa fa-instagram</v-icon>
       </v-btn></a>
       
       

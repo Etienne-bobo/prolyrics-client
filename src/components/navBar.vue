@@ -141,7 +141,7 @@
         >
 
          <v-list-item>
-                <router-link to="/home">
+                <router-link to="/">
                   <v-btn icon class="mr-12 ml-2" color="black">
 
                   <v-icon class="ml-12">home </v-icon>
