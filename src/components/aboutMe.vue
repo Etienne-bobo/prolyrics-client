@@ -6,7 +6,7 @@
     <v-img
       class="white--text align-end image"
       height="200px"
-      src="https://cdn.vuetifyjs.com/images/cards/docks.jpg"
+      src="../../public/images/bobo.jpg" 
     >
     </v-img>
     <v-card-text class="text--primary pt-12">

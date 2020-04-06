@@ -14,15 +14,10 @@
       <v-btn class="mx-2 mb-10" fab dark small color="pink">
       <v-icon dark>fa fa-whatsapp</v-icon>
       </v-btn></a>
+      <a href="http://www.instagram.com/etienne-bobo">
       <v-btn class="mx-2 mb-10" fab dark small color="pink">
       <v-icon dark>mdi-heart</v-icon>
-      </v-btn>
-      <v-btn class="mx-2 mb-10" fab dark small color="pink">
-      <v-icon dark>mdi-heart</v-icon>
-      </v-btn>
-      <v-btn class="mx-2  mb-10" fab dark small color="pink">
-      <v-icon dark>mdi-heart</v-icon>
-      </v-btn>
+      </v-btn></a>
       
       
       
@@ -41,3 +36,9 @@
     }),
   }
 </script>
+
+<style>
+a{
+
+}
+</style>
