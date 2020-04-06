@@ -64,7 +64,15 @@ const routes = [
     component: () =>
     import(/* webpackChunkName: "about" */ "../components/viewSong.vue")
   },
-  
+  {
+    path: "/songs/:itemId/edit",
+    name: "edit-song",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+    import(/* webpackChunkName: "about" */ "../components/editSongs.vue")
+  }
   ];
 
 const router = new VueRouter({

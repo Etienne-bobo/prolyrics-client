@@ -1,8 +1,8 @@
 <template>
     <div class="navBar">
        
-    <v-app-bar app dense height="70px" color="grey darken-3 white--text" class="d-none d-sm-none d-md-flex">
-         <router-link to="Home">
+    <!-- <v-app-bar app dense height="70px" color="grey darken-3 white--text" class="d-none d-sm-none d-md-flex"> -->
+         <!-- <router-link to="/Home">
            <v-btn icon class="mr-10 ml-10" >
               <v-toolbar-title class="white--text marg">Pro Lyrics</v-toolbar-title>
 
@@ -10,7 +10,7 @@
 
         </router-link>
 
-      <router-link to="songs">
+      <router-link to="/songs">
        <v-btn icon color="white" class="mr-12 ml-12">
       
         <v-icon color="white">audiotrack</v-icon> 
@@ -22,7 +22,7 @@
       <v-spacer></v-spacer>
 
 
-          <router-link to="register">
+          <router-link to="/register">
                   <v-btn v-if="!$store.state.isUserLoggedIn" icon class="mr-2 ml-8" color="white">
 
                   <v-icon color="white">account_circle </v-icon>
@@ -31,7 +31,7 @@
        
      
       <v-btn v-if="$store.state.isUserLoggedIn" icon @click="logout">
-        <router-link to="home">
+        <router-link to="/home">
                <v-icon color="white">power_settings_new</v-icon>
         </router-link>
        
@@ -42,40 +42,82 @@
         contact Us
       </v-btn>
 
-     <form>
-    <div class="input-group mb-3 ml-10">
-      <div class="input-group-prepend">
-        <span class="input-group-text"><v-icon>mdi-magnify</v-icon></span>
-      </div>
-      <input type="text" class="form-control">
-    </div>
-  </form>
+      <div class="text-center">
+    <v-dialog
+      v-model="dialog"
+      width="500"
+    >
+      <template v-slot:activator="{ on }">
+        <v-btn
+          icon
+          color="white"
+          dark
+          class="marg2"
+          v-on="on"
+        >
+          <v-icon>search</v-icon>
+        </v-btn>
+      </template>
+
+      <v-card>
+        <v-card-title
+          class="headline grey lighten-2"
+          primary-title
+        >
+          Search for a Song Title 
+        </v-card-title>
+
+        <v-card-text>
+          <v-text-field
+            label="Search"
+            counter
+            maxlength="100"
+          ></v-text-field>
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+          >
+            search
+          </v-btn>
+           <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            text
+            @click="dialog = false"
+          >
+            back
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </div>
+      
     </v-app-bar>
 
- 
+  -->
     <v-app-bar
       app
       color="grey darken-3 white--text"
       dark
       prominent
       height="60"
-      class="d-flex d-sm-flex d-md-none"
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
       <v-toolbar-title>Pro Lyrics</v-toolbar-title>
       
       <v-spacer></v-spacer>
-
-      <v-btn icon class="marg2">
-        <v-icon>mdi-magnify</v-icon>
-      </v-btn>
-
+      
       <v-btn icon>
         <v-icon>email</v-icon>
       </v-btn>
       <v-btn v-if="$store.state.isUserLoggedIn" icon @click="logout">
-        <router-link to="home">
+        <router-link to="/home">
                <v-icon color="white">power_settings_new</v-icon>
         </router-link>
        
@@ -99,7 +141,7 @@
         >
 
          <v-list-item>
-                <router-link to="home">
+                <router-link to="/home">
                   <v-btn icon class="mr-12 ml-2" color="black">
 
                   <v-icon class="ml-12">home </v-icon>
@@ -109,7 +151,7 @@
           </v-list-item>
 
           <v-list-item>
-            <router-link to="songs">
+            <router-link to="/songs">
               <v-btn icon color="black" class="mr-12 ml-8">
       
               <v-icon color="black">audiotrack</v-icon> 
@@ -119,7 +161,7 @@
           </v-list-item>
 
           <v-list-item>
-                  <router-link to="register">
+                  <router-link to="/register">
                   <v-btn v-if="!$store.state.isUserLoggedIn" icon class="mr-12 ml-12" color="black">
 
                   <v-icon class="ml-12">account_circle </v-icon>
@@ -131,7 +173,7 @@
           </v-list-item>
 
           <v-list-item>
-                <router-link to="about">
+                <router-link to="/about">
                   <v-btn icon class="mr-12 ml-3" color="black">
 
                   <v-icon class="ml-12">insert_emoticon </v-icon>
@@ -150,6 +192,7 @@
 <script>
 export default {
    data: () => ({
+       dialog: false,
       drawer: false,
       group: null,
     }),

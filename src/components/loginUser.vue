@@ -5,9 +5,9 @@
            
            <h2>Login</h2>
            <hr>
-         
+                
                 <div class="row pb-5">
-                    <div class="col-sm">
+                    <div class="col-sm image">
                         <img src="../../public/images/music_logo.jpg" width="250px" style="border-radius:50%">
                     </div>
                     <div class="col-sm">
@@ -22,7 +22,11 @@
                                 </div>
                                 
                         </form>
-                         <v-btn @click="login" class="mt-5 primary p_btn">Login</v-btn><br><br>
+                        <router-link to="songs"> <v-btn @click="login" class="mt-5 primary p_btn">Login</v-btn><br><br></router-link>
+                          <div class="bg-warning white--text sty"  v-html="error">
+
+                 </div>
+
                                <p>New User ? </p> 
                                <router-link to="register">
                                     <v-btn>Register</v-btn>
@@ -34,8 +38,7 @@
            
         
        </div>
-        
-        <div v-html="error"></div>
+     
     </div>
 </template>
 
@@ -96,5 +99,15 @@ export default {
         box-shadow: inset 5px 5px -6px darkslategrey,inset -5px -2px 10px white;
 
     }
+    .sty{
+        border-radius: 20px;
+        text-align:center;
+        margin:5px 0px;
+    }
+       .image{
+        text-align:center;
+
+    }
+      
    
 </style>

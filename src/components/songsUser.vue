@@ -1,13 +1,19 @@
 <template>
+  
   <v-row>
+   
+   
+    
     <v-col cols="12" sm="6" offset-sm="3">
-      <v-card>
+       <searchSong/>
+      <v-card class="mr-2 ml-2">
         <v-toolbar color="grey darken-2" light extended>
           <v-toolbar-title class="white--text">My Playlist</v-toolbar-title>
           <v-spacer></v-spacer>
           <template v-slot:extension>
            
             <v-btn
+              v-if="$store.state.isUserLoggedIn"
               fab
               color="primary lighten-1"
               bottom
@@ -37,7 +43,7 @@
               absolute
               large
             >
-              <v-icon>audiotrack</v-icon>
+              <v-icon>mic</v-icon>
             </v-btn>
               <v-list-item-title @click="navigateto(item)" class="ml-10">{{ item.title }}</v-list-item-title>
               <v-list-item-subtitle @click="navigateto(item)" class="ml-10">{{ item.artist }}</v-list-item-subtitle>
@@ -58,6 +64,8 @@
       </v-card>
     </v-col>
   </v-row>
+
+  
 </template>
 
 
@@ -69,15 +77,16 @@
 
 <script>
 import songsService from '../services/songService'
+import searchSong from '@/components/searchSong'
 export default {
     data() {
         return {
-            songs:null
+            songs:null,
         }
     },
-    async mounted() {
-        this.songs = (await songsService.songs()).data
-    },
+    // async mounted() {
+    //     this.songs = (await songsService.songs()).data
+    // },
     methods:{
         navigateTo : function(){
             this.$router.push({
@@ -90,7 +99,18 @@ export default {
                 name:'song'
             })
         }
-    }
+    },
+    components:{
+      searchSong
+    },
+    watch: {
+      '$route.query.search':{
+        immediate: true,
+        async handler (value){
+          this.songs = (await songsService.songs(value)).data
+        }
+      }
+    },
 }
 </script>
 

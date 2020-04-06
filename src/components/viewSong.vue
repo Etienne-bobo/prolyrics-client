@@ -5,49 +5,27 @@
                 <v-card
     class="mx-auto"
     raised
-    max-width="444"
+    max-width="400"
   >
-    
-      {{song.albumImageUrl}}
+     <v-img
+      :src="song.albumImageUrl"
+      height="230px"
+    ></v-img>
+
+      
 
 
     <v-card-title>
-      Top western road trips
+      {{song.title}}
     </v-card-title>
 
     <v-card-subtitle>
-      1,000 miles of wonder
+      {{song.artist}}
+    </v-card-subtitle>
+    <v-card-subtitle>
+      {{song.album}}
     </v-card-subtitle>
 
-    <v-card-actions>
-      <v-btn text>Share</v-btn>
-
-      <v-btn
-        color="purple"
-        text
-      >
-        Explore
-      </v-btn>
-
-      <v-spacer></v-spacer>
-
-      <v-btn
-        icon
-        @click="show = !show"
-      >
-        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-      </v-btn>
-    </v-card-actions>
-
-    <v-expand-transition>
-      <div v-show="show">
-        <v-divider></v-divider>
-
-        <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
-        </v-card-text>
-      </div>
-    </v-expand-transition>
   </v-card>
 
             </div>
@@ -55,20 +33,9 @@
                 <v-card
     class="mx-auto"
     raised
-    max-width="444"
+    max-width="400"
   >
-    <v-img
-      src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-      height="200px"
-    ></v-img>
-
-    <v-card-title>
-      Top western road trips
-    </v-card-title>
-
-    <v-card-subtitle>
-      1,000 miles of wonder
-    </v-card-subtitle>
+    <youtube :video-id="song.youtubeId" :player-width='444' :player-height="280"></youtube>
 
     <v-card-actions>
       <v-btn text>Share</v-btn>
@@ -85,7 +52,9 @@
       <v-btn
         icon
         @click="show = !show"
+        class="mr-5"
       >
+      lyrics
         <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
     </v-card-actions>
@@ -95,11 +64,22 @@
         <v-divider></v-divider>
 
         <v-card-text>
-          I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey, you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to escape.
+          {{song.lyrics}}
         </v-card-text>
       </div>
     </v-expand-transition>
   </v-card>
+  <div align="center">
+     <v-btn
+        v-if="$store.state.isUserLoggedIn"
+        @click="navigateTo"
+        color="red"
+        class="mt-12 white--text"
+      >
+       <v-icon left>mdi-pencil</v-icon> 
+        Edit Song
+      </v-btn>
+  </div>
 
             </div>
         </div>
@@ -117,6 +97,13 @@ import songService from '@/services/songService'
                 show: false,
                 song:{}
             }
+        },
+        methods: {
+          navigateTo:function(){
+              this.$router.push({
+                name:'edit-song'
+            })
+          }
         },
         async mounted(){
           const itemId = this.$store.state.route.params.itemId
