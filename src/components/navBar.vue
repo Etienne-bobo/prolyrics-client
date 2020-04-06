@@ -113,9 +113,9 @@
       
       <v-spacer></v-spacer>
       
-      <v-btn icon>
+      <!-- <v-btn icon>
         <v-icon>email</v-icon>
-      </v-btn>
+      </v-btn> -->
       <v-btn v-if="$store.state.isUserLoggedIn" icon @click="logout">
         <router-link to="/home">
                <v-icon color="white">power_settings_new</v-icon>
@@ -159,7 +159,15 @@
               </v-btn>
             </router-link>
           </v-list-item>
+            <v-list-item>
+                <router-link to="/about">
+                  <v-btn icon class="mr-12 ml-3" color="black">
 
+                  <v-icon class="ml-12">insert_emoticon </v-icon>
+                  About
+                  </v-btn>
+                  </router-link>
+          </v-list-item>
           <v-list-item>
                   <router-link to="/register">
                   <v-btn v-if="!$store.state.isUserLoggedIn" icon class="mr-12 ml-12" color="black">
@@ -172,15 +180,7 @@
                 
           </v-list-item>
 
-          <v-list-item>
-                <router-link to="/about">
-                  <v-btn icon class="mr-12 ml-3" color="black">
-
-                  <v-icon class="ml-12">insert_emoticon </v-icon>
-                  About
-                  </v-btn>
-                  </router-link>
-          </v-list-item>
+        
 
         </v-list-item-group>
       </v-list>

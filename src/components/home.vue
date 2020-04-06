@@ -1,6 +1,6 @@
 <template>
 <div class="home">
-<v-carousel height="300">
+<v-carousel height="300" class="mt-0">
     <v-carousel-item
       v-for="(item,i) in items"
       :key="i"
@@ -10,7 +10,7 @@
     ></v-carousel-item>
   </v-carousel>
 
-  <template>
+  
   <v-card
     class="mx-auto white--text vid mt-5 mb-5 ml-2 mr-2"
     color="red lighten-3"
@@ -51,7 +51,6 @@
        
     </div>
     
-</template>
 </div>
   
   
