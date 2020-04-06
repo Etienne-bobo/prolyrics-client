@@ -12,7 +12,7 @@
 
   <template>
   <v-card
-    class="mx-auto white--text vid mt-5 mb-5"
+    class="mx-auto white--text vid mt-5 mb-5 ml-2 mr-2"
     color="red lighten-3"
 
   >
@@ -22,7 +22,8 @@
     </v-card-text>
 
   </v-card>
-    <div class="row">
+  
+    <div class="row mr-2 ml-2">
            
             <div class="col-sm">
                 <v-card
@@ -30,8 +31,7 @@
                     raised
                     max-width="400"
                 >
-                    <youtube :video-id="TPnlGOSxtuI" :player-width='444' :player-height="280"></youtube>
-
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/bWt13q8BZoI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
                 </v-card>
 
@@ -43,8 +43,7 @@
                     raised
                     max-width="400"
                 >
-                    <youtube :video-id="Vc5FWoO6FdA" :player-width='444' :player-height="280"></youtube>
-
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Vc5FWoO6FdA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 
                 </v-card>
 

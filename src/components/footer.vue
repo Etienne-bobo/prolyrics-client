@@ -3,7 +3,6 @@
   <v-card height="150">
     <v-footer
       color="grey"
-     absolute
       class="font-weight-medium"
       fixed
     >
