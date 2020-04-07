@@ -112,10 +112,10 @@
       <v-toolbar-title>Pro Lyrics</v-toolbar-title>
       
       <v-spacer></v-spacer>
-      
-      <!-- <v-btn icon>
+      <a href="#contact">
+       <v-btn icon>
         <v-icon>email</v-icon>
-      </v-btn> -->
+      </v-btn></a>
       <v-btn v-if="$store.state.isUserLoggedIn" icon @click="logout">
         <router-link to="/home">
                <v-icon color="white">power_settings_new</v-icon>

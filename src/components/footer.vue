@@ -1,15 +1,17 @@
 
 <template>
-  <v-card height="50">
+<div id="contact">
+  <v-card   class="mt-12">
     <v-footer
-      color="grey"
-      class="font-weight-medium"
-      fixed
+      bottom
+      class="font-weight-medium mt-12 marg"
     >
       <v-col
         class="text-center"
         cols="12"
       >
+      
+
       <a href="https://api.whatsapp.com/send?phone=918580541646">
       <v-btn class="mx-2 mb-10" fab dark small color="pink">
       <v-icon dark>fa fa-whatsapp</v-icon>
@@ -27,6 +29,8 @@
       </v-col>
     </v-footer>
   </v-card>
+        </div>
+
 </template>
 
 <script>
@@ -38,7 +42,7 @@
 </script>
 
 <style>
-a{
-
+.marg{
+  margin-top:100px;
 }
 </style>

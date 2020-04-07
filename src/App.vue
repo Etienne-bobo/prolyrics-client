@@ -1,21 +1,21 @@
 <template>
-  <v-app>
+  <v-app height="100%">
    
     <v-content>
        <navBar/>
     <welcome/>
 
       <router-view></router-view>
-    <footers/>
 
     </v-content>
+    <footerie/>
 
   </v-app>
 </template>
 
 <script>
 import navBar from "./components/navBar";
-import footers from "./components/footer";
+import footerie from "./components/footer";
 import welcome from "./components/welcome";
 
 
@@ -24,7 +24,7 @@ export default {
 
   components: {
    navBar,
-   footers,
+   footerie,
    welcome
   },
 
