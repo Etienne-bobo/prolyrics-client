@@ -167,12 +167,12 @@
                   </router-link>
           </v-list-item>
           <v-list-item>
-                  <router-link to="/register">
-                  <v-btn v-if="!$store.state.isUserLoggedIn" icon class="mr-12 ml-12" color="black">
+                  <router-link to="/login">
+                  <v-btn v-if="!$store.state.isUserLoggedIn" icon class="mr-12 ml-4" color="black">
 
                   <v-icon class="ml-12">account_circle </v-icon>
-                  Sign Up/Sign In
-                  </v-btn>
+                  Sign In
+                  </v-btn> 
                   </router-link>
        
                 

@@ -27,11 +27,11 @@
 
                  </div>
 
-                               <p>New User ? </p> 
+                               <!-- <p>New User ? </p> 
                                <router-link to="register">
                                     <v-btn>Register</v-btn>
 
-                               </router-link>
+                               </router-link> -->
                     </div>
                    
                 </div>

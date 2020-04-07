@@ -35,7 +35,7 @@
               <v-icon :class="[item.iconClass]">{{ item.icon }}</v-icon>
             </v-list-item-avatar>
 
-            <v-list-item-content>
+            <v-list-item-content @click="navigateto(item)">
                 <v-btn
               fab
               color="grey darken-2 white--text"
