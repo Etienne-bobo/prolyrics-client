@@ -38,15 +38,7 @@
     <youtube :video-id="song.youtubeId" :player-width='444' :player-height="280"></youtube>
 
     <v-card-actions>
-      <v-btn text>Share</v-btn>
-
-      <v-btn
-        color="purple"
-        text
-      >
-        Explore
-      </v-btn>
-
+      
       <v-spacer></v-spacer>
 
       <v-btn
