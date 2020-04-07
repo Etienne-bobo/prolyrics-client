@@ -45,7 +45,7 @@
             >
               <v-icon>mic</v-icon>
             </v-btn>
-              <v-list-item-title @click="navigateto(item)" class="ml-10">{{ item.title }}</v-list-item-title>
+              <v-list-item-title @click="navigateto(item)" class="ml-10 deco">{{ item.title }}</v-list-item-title>
               <v-list-item-subtitle @click="navigateto(item)" class="ml-10">{{ item.artist }}</v-list-item-subtitle>
               <v-list-item-subtitle @click="navigateto(item)" class="ml-10">{{ item.album }}</v-list-item-subtitle>
 
@@ -117,5 +117,8 @@ export default {
 <style scoped>
     .container{
         margin-top: 30px;
+    }
+    .deco{
+      color: green;
     }
 </style>
