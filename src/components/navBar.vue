@@ -108,7 +108,13 @@
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Pro Lyrics</v-toolbar-title>
+      <v-toolbar-title>
+        <v-img
+       width="110"
+      src="../../public/images/prolog2.jpg" 
+    >
+    </v-img>
+      </v-toolbar-title>
       
       <v-spacer></v-spacer>
       <a href="#contact">
