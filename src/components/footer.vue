@@ -17,7 +17,7 @@
       <v-btn class="mx-2 mb-10" fab dark small color="pink">
       <v-icon dark>fa fa-whatsapp</v-icon>
       </v-btn></a>
-      <a href="http://www.instagram.com/etienne-bobo">
+      <a href="http://www.instagram.com/etienne_bobo">
       <v-btn class="mx-2 mb-10" fab dark small color="pink">
       <v-icon dark>fa fa-instagram</v-icon>
       </v-btn></a>
