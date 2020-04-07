@@ -127,7 +127,6 @@
     <v-navigation-drawer
       v-model="drawer"
       absolute
-      right
       temporary
     >
       <v-list
