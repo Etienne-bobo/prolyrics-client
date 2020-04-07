@@ -43,7 +43,7 @@
               absolute
               large
             >
-              <v-icon>mic</v-icon>
+              {{item.albumImageUrl}}
             </v-btn>
               <v-list-item-title @click="navigateto(item)" class="ml-10 deco">{{ item.title }}</v-list-item-title>
               <v-list-item-subtitle @click="navigateto(item)" class="ml-10">{{ item.artist }}</v-list-item-subtitle>
@@ -53,7 +53,7 @@
 
             <v-list-item-action>
               <v-btn icon ripple>
-                <v-icon color="grey lighten-1">mdi-information</v-icon>
+                <v-icon color="grey lighten-1">mic</v-icon>
               </v-btn>
             </v-list-item-action>
           </v-list-item>
