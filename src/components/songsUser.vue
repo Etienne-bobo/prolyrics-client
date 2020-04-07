@@ -62,6 +62,15 @@
 
        
       </v-card>
+      <div align="center" class="mt-12">
+        <a href="https://www.youtube.com/channel/UCm52eL6T8dh_51OZLb8QoNA">
+           <v-btn large color="red lighten-2" class="white--text cent">
+        <v-icon>fa fa-youtube</v-icon>
+        Visit our youtube Channel
+      </v-btn>
+      </a>
+      </div>
+     
     </v-col>
   </v-row>
 
