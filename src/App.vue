@@ -3,7 +3,7 @@
    
     <v-content>
        <navBar/>
-    
+    <welcome/>
 
       <router-view></router-view>
     <footers/>
@@ -16,13 +16,16 @@
 <script>
 import navBar from "./components/navBar";
 import footers from "./components/footer";
+import welcome from "./components/welcome";
+
 
 export default {
   name: "App",
 
   components: {
    navBar,
-   footers
+   footers,
+   welcome
   },
 
   data: () => ({

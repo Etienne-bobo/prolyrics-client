@@ -1,6 +1,6 @@
 
 <template>
-  <v-card height="150">
+  <v-card height="50">
     <v-footer
       color="grey"
       class="font-weight-medium"
