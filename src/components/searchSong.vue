@@ -43,6 +43,6 @@ export default {
 </script>
 <style scoped>
     .searchSong{
-        width :300px;
+        width :380px;
     }
 </style>

@@ -12,7 +12,7 @@
     <v-card-text class="text--primary pt-12">
       <div>My Name is Efoe Etienne BLAVO </div>
 
-      <div>I'm studying BTech CSE and i'm passionate about everything relatd to programming and Technology </div>
+      <div>I'm studying BTech CSE and i'm passionate about everything related to programming and Technology </div>
     </v-card-text>
   </v-card>
 </template>

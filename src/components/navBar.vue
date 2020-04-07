@@ -101,7 +101,6 @@
 
   -->
     <v-app-bar
-      app
       color="grey darken-3 white--text"
       dark
       prominent
@@ -128,7 +127,7 @@
     <v-navigation-drawer
       v-model="drawer"
       absolute
-      bottom
+      right
       temporary
     >
       <v-list

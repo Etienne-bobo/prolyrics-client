@@ -4,7 +4,8 @@
   <v-card   class="mt-12">
     <v-footer
       bottom
-      class="font-weight-medium mt-12 marg"
+      class="font-weight-medium"
+      color="grey"
     >
       <v-col
         class="text-center"
@@ -43,6 +44,6 @@
 
 <style>
 .marg{
-  margin-top:100px;
+  margin-top:300px;
 }
 </style>
