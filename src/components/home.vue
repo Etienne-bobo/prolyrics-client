@@ -50,7 +50,15 @@
         </div>
        
     </div>
-    
+  <div align="center">
+    <router-link to="/songs">
+       <v-btn color="red lighten-2" class="white--text cent">
+        <v-icon>mic</v-icon>
+        Discover More Songs
+      </v-btn>
+    </router-link>
+     
+    </div>
 </div>
   
   
@@ -64,10 +72,12 @@
       return {
         items: [
           {
-            src: 'http://www.ilfondamento.be/wp-content/uploads/2019/08/musicworkshop-image.jpg',
+                        src: 'https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/12/YouTube-music-796x419.jpg',
+
           },
           {
-            src: 'https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2017/12/YouTube-music-796x419.jpg',
+                        src: 'http://www.ilfondamento.be/wp-content/uploads/2019/08/musicworkshop-image.jpg',
+
           },
          
         ],
@@ -79,5 +89,9 @@
 <style>
 .vid{
     text-align:center;
+}
+.cent{
+  text-align:center;
+  margin:30px 0px auto;
 }
 </style>
