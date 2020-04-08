@@ -52,8 +52,8 @@
     </div>
   <div align="center">
     <router-link to="/songs">
-       <v-btn color="red lighten-2" class="white--text cent">
-        <v-icon>mic</v-icon>
+       <v-btn large color="red lighten-2" class="white--text cent">
+        <v-icon>fa fa-music</v-icon>
         Discover More Songs
       </v-btn>
     </router-link>

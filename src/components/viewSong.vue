@@ -31,6 +31,7 @@
             </div>
             <div class="col-sm">
                 <v-card
+
     class="mx-auto"
     raised
     max-width="400"
