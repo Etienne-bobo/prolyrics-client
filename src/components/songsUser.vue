@@ -52,8 +52,8 @@
             </v-list-item-content>
 
             <v-list-item-action>
-              <v-btn icon ripple>
-                <v-icon color="grey lighten-1">fa fa-play</v-icon>
+              <v-btn icon ripple @click="navigateto(item)">
+                <v-icon @click="navigateto(item)" color="grey lighten-1">fa fa-play</v-icon>
               </v-btn>
             </v-list-item-action>
           </v-list-item>
@@ -65,7 +65,7 @@
       <div align="center" class="mt-12">
         <a href="https://www.youtube.com/channel/UCm52eL6T8dh_51OZLb8QoNA">
            <v-btn large color="red lighten-2" class="white--text cent">
-        <v-icon>fa fa-youtube</v-icon>
+        <v-icon class="mr-3">fa fa-youtube</v-icon>
         Visit our youtube Channel
       </v-btn>
       </a>

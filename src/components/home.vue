@@ -53,7 +53,7 @@
   <div align="center">
     <router-link to="/songs">
        <v-btn large color="red lighten-2" class="white--text cent">
-        <v-icon>fa fa-music</v-icon>
+        <v-icon class="mr-3">fa fa-music</v-icon>
         Discover More Songs
       </v-btn>
     </router-link>
