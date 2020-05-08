@@ -21,7 +21,6 @@
     <div class="row mr-2 ml-2">
       <div class="col-sm">
         <v-card class="mx-auto" raised max-width="400">
-          >
           <iframe
             width="560"
             height="315"
@@ -36,7 +35,6 @@
     <div class="row mr-2 ml-2">
       <div class="col-sm">
         <v-card class="mx-auto" raised max-width="400">
-          >
           <iframe
             width="560"
             height="315"
@@ -51,7 +49,6 @@
 
       <div class="col-sm">
         <v-card class="mx-auto" raised max-width="400">
-          >
           <iframe
             width="560"
             height="315"
