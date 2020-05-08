@@ -1,16 +1,15 @@
-
 <template>
- <div class="songs">
-     <songsUser/>
- </div>
+  <div class="songs">
+    <songsUser />
+  </div>
 </template>
 
 <script>
-import songsUser from '../components/songsUser'
+import songsUser from "../components/songsUser";
 export default {
-    name:'songs',
-    components:{
-        songsUser
-    }
-}
+  name: "songs",
+  components: {
+    songsUser
+  }
+};
 </script>

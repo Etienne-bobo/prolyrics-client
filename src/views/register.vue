@@ -1,20 +1,18 @@
 <template>
-    <div class="registerUser">
-        <registerUser/>
-    </div>
+  <div class="registerUser">
+    <registerUser />
+  </div>
 </template>
 
 <script>
-import registerUser from '@/components/registerUser'
+import registerUser from "@/components/registerUser";
 export default {
-    name:'register',
-    components:{
-        registerUser
-    },
-    data() {
-        return {
-            
-        }
-    },
-}
+  name: "register",
+  components: {
+    registerUser
+  },
+  data() {
+    return {};
+  }
+};
 </script>

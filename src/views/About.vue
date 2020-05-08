@@ -4,10 +4,10 @@
   </div>
 </template>
 <script>
-import aboutMe from '@/components/aboutMe'
- export default {
-   components:{
-     aboutMe
-   }
- }
+import aboutMe from "@/components/aboutMe";
+export default {
+  components: {
+    aboutMe
+  }
+};
 </script>

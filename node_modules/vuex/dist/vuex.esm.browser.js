@@ -1,5 +1,5 @@
 /**
- * vuex v3.1.3
+ * vuex v3.3.0
  * (c) 2020 Evan You
  * @license MIT
  */
@@ -57,7 +57,11 @@ function devtoolPlugin (store) {
 
   store.subscribe((mutation, state) => {
     devtoolHook.emit('vuex:mutation', mutation, state);
-  });
+  }, { prepend: true });
+
+  store.subscribeAction((action, state) => {
+    devtoolHook.emit('vuex:action', action, state);
+  }, { prepend: true });
 }
 
 /**
@@ -122,6 +126,10 @@ class Module {
 
   getChild (key) {
     return this._children[key]
+  }
+
+  hasChild (key) {
+    return key in this._children
   }
 
   update (rawModule) {
@@ -211,6 +219,13 @@ class ModuleCollection {
     if (!parent.getChild(key).runtime) return
 
     parent.removeChild(key);
+  }
+
+  isRegistered (path) {
+    const parent = this.get(path.slice(0, -1));
+    const key = path[path.length - 1];
+
+    return parent.hasChild(key)
   }
 }
 
@@ -444,13 +459,13 @@ class Store {
     })
   }
 
-  subscribe (fn) {
-    return genericSubscribe(fn, this._subscribers)
+  subscribe (fn, options) {
+    return genericSubscribe(fn, this._subscribers, options)
   }
 
-  subscribeAction (fn) {
+  subscribeAction (fn, options) {
     const subs = typeof fn === 'function' ? { before: fn } : fn;
-    return genericSubscribe(subs, this._actionSubscribers)
+    return genericSubscribe(subs, this._actionSubscribers, options)
   }
 
   watch (getter, cb, options) {
@@ -495,6 +510,16 @@ class Store {
     resetStore(this);
   }
 
+  hasModule (path) {
+    if (typeof path === 'string') path = [path];
+
+    {
+      assert(Array.isArray(path), `module path must be a string or an Array.`);
+    }
+
+    return this._modules.isRegistered(path)
+  }
+
   hotUpdate (newOptions) {
     this._modules.update(newOptions);
     resetStore(this, true);
@@ -508,9 +533,11 @@ class Store {
   }
 }
 
-function genericSubscribe (fn, subs) {
+function genericSubscribe (fn, subs, options) {
   if (subs.indexOf(fn) < 0) {
-    subs.push(fn);
+    options && options.prepend
+      ? subs.unshift(fn)
+      : subs.push(fn);
   }
   return () => {
     const i = subs.indexOf(fn);
@@ -998,7 +1025,7 @@ function getModuleByNamespace (store, helper, namespace) {
 var index_esm = {
   Store,
   install,
-  version: '3.1.3',
+  version: '3.3.0',
   mapState,
   mapMutations,
   mapGetters,
