@@ -113,7 +113,7 @@
         </v-btn></a
       >
       <v-btn v-if="$store.state.isUserLoggedIn" icon @click="logout">
-        <router-link to="/home">
+        <router-link to="/">
           <v-icon color="white">power_settings_new</v-icon>
         </router-link>
       </v-btn>
