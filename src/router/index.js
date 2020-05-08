@@ -7,8 +7,7 @@ const routes = [
   {
     path: "/",
     name: "Home",
-    component: () =>
-    import(/* webpackChunkName: "about" */ "../views/Home.vue")
+    component: () => import(/* webpackChunkName: "about" */ "../views/Home.vue")
   },
   {
     path: "/about",
@@ -53,7 +52,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-    import(/* webpackChunkName: "about" */ "../components/createSongs.vue")
+      import(/* webpackChunkName: "about" */ "../components/createSongs.vue")
   },
   {
     path: "/songs/:itemId",
@@ -62,7 +61,7 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-    import(/* webpackChunkName: "about" */ "../components/viewSong.vue")
+      import(/* webpackChunkName: "about" */ "../components/viewSong.vue")
   },
   {
     path: "/songs/:itemId/edit",
@@ -71,9 +70,9 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-    import(/* webpackChunkName: "about" */ "../components/editSongs.vue")
+      import(/* webpackChunkName: "about" */ "../components/editSongs.vue")
   }
-  ];
+];
 
 const router = new VueRouter({
   mode: "history",

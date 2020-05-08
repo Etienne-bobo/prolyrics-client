@@ -8,7 +8,6 @@
           <v-spacer></v-spacer>
           <template v-slot:extension>
             <v-btn
-              v-if="$store.state.isUserLoggedIn"
               fab
               color="primary lighten-1"
               bottom
@@ -32,7 +31,6 @@
 
             <v-list-item-content @click="navigateto(item)">
               <v-btn fab color="grey darken-2 white--text" left absolute large>
-                >
                 <v-icon>fa fa-music</v-icon>
               </v-btn>
               <v-list-item-title @click="navigateto(item)" class="ml-10 deco">{{
@@ -91,7 +89,7 @@ export default {
   methods: {
     navigateTo: function() {
       this.$router.push({
-        name: "create-songs"
+        name: "login"
       });
     },
     navigateto: function(item) {

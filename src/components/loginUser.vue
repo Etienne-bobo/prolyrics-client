@@ -8,7 +8,7 @@
         <div class="col-sm image">
           <img
             src="../../public/images/music_logo.jpg"
-            width="250px"
+            width="220px"
             style="border-radius:50%"
           />
         </div>
@@ -40,7 +40,7 @@
               />
             </div>
           </form>
-          <router-link to="songs">
+          <router-link to="/songs/create">
             <v-btn @click="login" class="mt-5 primary p_btn">Login</v-btn
             ><br /><br
           /></router-link>

@@ -138,7 +138,6 @@
             />
           </div>
         </v-card>
-        <v-btn color="primary">Continue</v-btn>
         <v-btn text @click="e6 = 3">Back</v-btn>
       </v-stepper-content>
     </v-stepper>
