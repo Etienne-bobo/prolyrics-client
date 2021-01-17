@@ -1,4 +1,4 @@
-# prolyrics
+# prolyrics client side code
 
 ## Project setup
 ```
